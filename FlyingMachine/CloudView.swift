@@ -15,7 +15,7 @@ struct CloudView: View {
         var size: CGFloat
         var yPosition: CGFloat
     }
-
+    var isBackground = false
     @State private var clouds: [Cloud] = (0..<10).map { index in
         Cloud(
             offset: CGFloat(-300 - (index * 100)),
@@ -27,6 +27,9 @@ struct CloudView: View {
 
     var body: some View {
         ZStack {
+            if isBackground {
+                Color.cyan
+            }
             ForEach(clouds) { cloud in
                 Image("Clouds")
                     .resizable()

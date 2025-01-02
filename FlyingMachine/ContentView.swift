@@ -11,9 +11,9 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color.cyan
-            CloudView()
+            CloudView(isBackground: true)
             AeroPlanView()
+            CloudView()
         }
     }
 }
