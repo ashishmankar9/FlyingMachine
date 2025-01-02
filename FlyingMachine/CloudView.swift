@@ -59,5 +59,5 @@ struct CloudView: View {
 }
 
 #Preview {
-    CloudView()
+    CloudView(isBackground: true)
 }
